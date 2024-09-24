@@ -45,7 +45,7 @@ export default function MovieSearch() {
     setMovieDetails(null);
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?t=${searchTerm}&apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?t=${searchTerm}&apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}`
       );
 
       if (!response.ok) {
