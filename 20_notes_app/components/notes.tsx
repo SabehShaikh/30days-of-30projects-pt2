@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"; // Import useState and useEffect ho
 import { Button } from "@/components/ui/button"; // Import custom Button component
 import { Card } from "@/components/ui/card"; // Import custom Card component
 import { FilePenIcon, TrashIcon } from "lucide-react"; // Import icons from lucide-react
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Define the Note type
 type Note = {
@@ -130,7 +131,7 @@ export default function NotesApp() {
 
   // JSX return statement rendering the Notes App UI
   return (
-    <div className="flex flex-col h-screen bg-background text-foreground">
+    <div className="flex flex-col h-screen bg-background text-foreground ">
       <header className="bg-muted p-4 shadow">
         <h1 className="text-2xl font-bold">Note Taker</h1>
       </header>
@@ -191,6 +192,31 @@ export default function NotesApp() {
               <p className="mt-2 text-muted-foreground">{note.content}</p>
             </Card>
           ))}
+
+          {/* Social media icons */}
+
+          <div className="mt-8 flex justify-center space-x-5">
+            <a
+              href="https://github.com/SabehShaikh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300"
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sabeh-shaikh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-500"
+            >
+              <FaLinkedin size={30} />
+            </a>
+          </div>
+          {/* Made by Sabeh Shaikh */}
+          <div className="mt-2 text-center text-sm text-gray-400">
+            Made by Sabeh Shaikh
+          </div>
         </div>
       </main>
     </div>
